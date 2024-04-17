@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is a test page</title>
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        padding: 8px;
+        text-align: left;
+    }
+
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <div>
+    <h1> Data from the Mini Project Recruitment </h1>
+  </div>
+    <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Roll No</th>  
+            <th>Semester</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.Name }}</td>
+                <td>{{ student.RollNo }}</td>
+                <td>{{ student.Semester }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      
+</body>
+</html>
